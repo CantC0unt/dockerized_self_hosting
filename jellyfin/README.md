@@ -40,6 +40,17 @@ networks:
 ```
 
 
+## "The Guide"
+
+### Install Directory
+
+The install can be done in any directory, I am going to use a new directory in home for convenience. If you choose to install somewhere else, dont forget to make the change the install directory in the other commands.
+
+```bash
+mkdir ~/dockerized_jellyfin
+```
+
+
 ### Jellyfin Compose 
 
 ![Static Badge](https://img.shields.io/badge/image-jellyfin/jellyfin:latest-pink)
@@ -121,3 +132,4 @@ docker compose -f ~/dockerized_jellyfin/docker-compose.yml up -d
 ```bash
 docker logs jellyfin
 ```
+

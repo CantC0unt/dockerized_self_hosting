@@ -25,6 +25,17 @@ networks:
 ```
 
 
+## "The Guide"
+
+### Install Directory
+
+The install can be done in any directory, I am going to use a new directory in home for convenience. If you choose to install somewhere else, dont forget to make the change the install directory in the other commands.
+
+```bash
+mkdir ~/dockerized_homeassistant
+```
+
+
 ### Home Assistant Compose 
 
 ![Static Badge](https://img.shields.io/badge/image-homeassistant/home--assistant:stable-pink)
@@ -92,3 +103,4 @@ docker compose -f ~/dockerized_homeassistant/docker-compose.yml up -d
 ```bash
 docker logs homeassistant
 ```
+

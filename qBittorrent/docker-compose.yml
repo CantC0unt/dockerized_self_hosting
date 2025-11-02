@@ -5,9 +5,9 @@ services:
     hostname: qbittorrent
     networks:
       macvlan_net:
-        ipv4_address: <static ip for unbound>
+        ipv4_address: <static ip for qbittorrent>
     environment:
-      TZ: 'Asia/Kolkata'
+      TZ: '<timezone>'
       PUID: '<user id>'
       PGID: '<user group id>'
       WEBUI_PORT: '80'
