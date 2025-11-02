@@ -99,7 +99,6 @@ mkdir ~/dockerized_pihole_with_unbound
   unbound:
     container_name: unbound
     image: klutchell/unbound:latest
-    platform: linux/arm64
     hostname: unbound
     networks:
       macvlan_net:
@@ -200,10 +199,6 @@ pihole:
       - SYS_TIME
       - SYS_NICE
     restart: unless-stopped
-
-networks:
-  macvlan_net:
-    external: true
 ```
 
 \* all configs marked `#post-configurable` can be configured later through pihole WebUI. Configuring it through compose will make it unconfigurable from WebUI.
@@ -233,7 +228,7 @@ mkdir ~/dockerized_pihole_with_unbound/etc-pihole ~/dockerized_pihole_with_unbou
 
 \* macvlan_net must be up before this is started
 
-\** you can replace the network configuration in the compose file with the one from `macvlan_net/docker-compose.yml `
+\** you can replace the network configuration in the compose file with the one from `macvlan_net/docker-compose.yml`
 
 ```bash
 docker compose -f ~/dockerized_pihole_with_unbound/docker-compose.yml up -d
@@ -264,7 +259,7 @@ docker logs pihole
 4. Disable RDNSS
 
 
-### RPI / Base Device Config
+### RPI / Device Config
 
 Assign a static IP to your _**device**_ running the PiHole container so that PiHole can get online as the DHCP Server
 

@@ -2,7 +2,7 @@ services:
   jellyfin:
     image: jellyfin/jellyfin
     container_name: jellyfin
-    hostname: homeassistant
+    hostname: jellyfin
     networks:
       macvlan_net:
         ipv4_address: <static ip for jellyfin>
@@ -20,7 +20,7 @@ services:
         read_only: true
     restart: unless-stopped
     environment:
-      - JELLYFIN_PublishedServerUrl=http://jelly.fin
+      - JELLYFIN_PublishedServerUrl=<server url>
     extra_hosts:
       - 'host.docker.internal:host-gateway'
 
