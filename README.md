@@ -1,5 +1,5 @@
 # Dockerized Self Hosting
-This repository contains configs (mostly docker compose files) for self hosting some services. Tuned to my preference.
+This repository contains configs (mostly docker compose files) for self hosting some services. Everything is tested for RPI but should work on any linux based system (Hopefully™)
 
 ## Motivation
 I like hosting things myself over using service providers wherever I can.
@@ -13,15 +13,17 @@ This Repository
 root
 ├── <service>
 │   ├── README.md
-│   ├── docker-compose.yml
+│   ├── <config>
 │   └── install.sh
 .
 .
 .
-└── README.md
+├── LICENSE
+├── README.md
+└── install.sh
 ```
 
-Install Directory
+Install Directory for dockerized services
 
 ```
 root
@@ -39,11 +41,11 @@ root
 ## Usage
 
 ### "I know what I'm doing"
-Copy the `docker-compose.yml` and modify it as you see fit.
+Copy the `config` (mostly `docker-compose.yml`) and modify it as you see fit.
 
 ### "I want to change the configs, but I dont fully know what I'm doing"
-Check `README.md` under the service you want to modify.
+Check `README.md` under the service you want to install / modify.
 
 ### "I don't care, just get it up and running"
 
-- [ ] **add the install commands here once they are done**
+- [ ] **I will eventually add the install commands here once I am done with the install scripts**

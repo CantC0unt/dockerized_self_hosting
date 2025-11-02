@@ -46,3 +46,6 @@ services:
       - SYS_NICE
     restart: unless-stopped
 
+networks:
+  macvlan_net:
+    external: true
