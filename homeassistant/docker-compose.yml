@@ -6,15 +6,14 @@ services:
     hostname: homeassistant
     networks:
       macvlan_net:
-        ipv4_address: <static ip for jellyfin>
+        ipv4_address: <static ip for homeassistant>
     environment:
-      TZ: 'Asia/Kolkata'
+      TZ: '<timezone>'
     volumes:
       - ./config:/config
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped
     privileged: true
-
 
 networks:
   macvlan_net:

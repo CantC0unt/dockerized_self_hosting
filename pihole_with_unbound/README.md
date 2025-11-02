@@ -176,7 +176,7 @@ pihole:
         ipv4_address: <static ip for pihole>
         ipv6_address: <static ipv6 for pihole - ULA>
     environment:
-      TZ: 'Asia/Kolkata'
+      TZ: '<timezone>'
       FTLCONF_webserver_api_password: 'pihole'
       FTLCONF_dns_listeningMode: 'all' #post-configurable
       FTLCONF_dns_upstreams: '<static ip for unbound>#53' #post-configurable
@@ -207,6 +207,7 @@ pihole:
 |-|-|-|
 |`<static ip for pihole>`|Any local IP|It _**MUST NOT**_ be assigned to another device by your DHCP server.<br> Use an IP outside of DHCP range.
 |`<static ipv6 for pihole - ULA>`|Any ULA IP|It _**MUST NOT**_ be assigned to another device.
+|`<timezone>`|Your Timezone|
 |`<static ip for unbound>`|Any local IP|It _**MUST**_ be assigned to unbound service.
 |`<first assignable ip>`|Any local IP|
 |`<last assignable ip>`|Any local IP|
