@@ -1,0 +1,52 @@
+name: homelab_master
+
+include:
+  - path: macvlan_net/compose.yaml
+
+services:
+  unbound:
+    extends:
+      file: dockerized_unbound/compose.yaml
+      service: unbound
+
+  pihole:
+    extends:
+      file: dockerized_pihole/compose.yaml
+      service: pihole
+    depends_on:
+      - unbound
+
+  homeassistant:
+    extends:
+      file: dockerized_home_assistant/compose.yaml
+      service: homeassistant
+    depends_on:
+      - pihole
+
+  karakeep:
+    extends:
+      file: dockerized_karakeep/compose.yaml
+      service: karakeep
+    depends_on:
+      - pihole
+
+  jellyfin:
+    extends:
+      file: dockerized_jellyfin/compose.yaml
+      service: jellyfin
+    depends_on:
+      - pihole
+
+  mealie:
+    extends:
+      file: dockerized_mealie/compose.yaml
+      service: mealie
+    depends_on:
+      - pihole
+
+  qbittorrent:
+    extends:
+      file: dockerized_qbittorrent/compose.yaml
+      service: qbittorrent
+    depends_on:
+      - pihole 

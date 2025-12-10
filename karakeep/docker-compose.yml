@@ -1,5 +1,5 @@
 services:
-  web:
+  karakeep:
     image: ghcr.io/karakeep-app/karakeep:release
     container_name: karakeep
     hostname: karakeep
